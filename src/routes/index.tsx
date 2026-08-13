@@ -72,9 +72,9 @@ function Invitation() {
           Together with their families
         </p>
         <h1 className="mt-6 leading-none">
-          <span className="script block text-6xl sm:text-8xl text-gilded">Louisa</span>
+          <span className="script block pb-4 text-6xl leading-[1.15] sm:text-8xl text-gilded">Louisa</span>
           <span className="my-2 block text-sm uppercase tracking-[0.6em] text-emerald">and</span>
-          <span className="script block text-6xl sm:text-8xl text-gilded">Julian</span>
+          <span className="script block pb-4 text-6xl leading-[1.15] sm:text-8xl text-gilded">Julian</span>
         </h1>
         <Ornament />
         <p className="mx-auto max-w-md text-sm leading-relaxed text-muted-foreground">
