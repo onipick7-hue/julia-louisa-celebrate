@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
 const VENUE_NAME = "[ Venue Name ]";
 const VENUE_ADDRESS = "[ Venue address will go here ]";
 
-function Ornament({ tone = "gold" }: { tone?: "gold" | "pale" }) {
+function Ornament() {
   return (
     <div className="flex items-center justify-center gap-4 py-7" aria-hidden="true">
       <span className="rule-gold w-20 sm:w-40" />
@@ -49,15 +49,7 @@ function Ornament({ tone = "gold" }: { tone?: "gold" | "pale" }) {
   );
 }
 
-function SectionTitle({
-  kicker,
-  title,
-  tone = "gold",
-}: {
-  kicker: string;
-  title: string;
-  tone?: "gold" | "pale";
-}) {
+function SectionTitle({ kicker, title }: { kicker: string; title: string }) {
   return (
     <header className="rise text-center">
       <p
@@ -66,7 +58,7 @@ function SectionTitle({
         {kicker}
       </p>
       <h2 className="mt-4 text-5xl sm:text-7xl text-gilded-anim">{title}</h2>
-      <Ornament tone={tone} />
+      <Ornament />
     </header>
   );
 }
@@ -133,7 +125,7 @@ function Invitation() {
                 Julian
               </span>
             </h1>
-            <Ornament tone="pale" />
+            <Ornament />
             <p className="mx-auto max-w-md text-sm leading-loose text-muted-foreground">
               Request the honour of your presence as they are joined in marriage. Your prayers and
               blessings would mean the world to us.
@@ -195,7 +187,7 @@ function Invitation() {
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-4xl">
-          <SectionTitle kicker="Where" title="The Venue" tone="pale" />
+          <SectionTitle kicker="Where" title="The Venue" />
           <div className="text-center">
             <p className="text-3xl text-gold-deep">{VENUE_NAME}</p>
             <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">{VENUE_ADDRESS}</p>
@@ -243,7 +235,7 @@ function Invitation() {
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-3xl">
-          <SectionTitle kicker="RSVP" title="Contacts" tone="pale" />
+          <SectionTitle kicker="RSVP" title="Contacts" />
           <div className="grid gap-6 sm:grid-cols-2">
             {["Louisa", "Julian"].map((n) => (
               <div key={n} className="frame-gold px-6 py-10 text-center">
@@ -255,7 +247,7 @@ function Invitation() {
           <p className="mt-10 text-center text-sm text-muted-foreground">
             Kindly reach out for any questions or to confirm your attendance.
           </p>
-          <Ornament tone="pale" />
+          <Ornament />
           <p className="script text-center text-5xl text-gilded-anim">Barakallahu lakuma</p>
         </div>
       </section>
