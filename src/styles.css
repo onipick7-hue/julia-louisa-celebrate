@@ -157,3 +157,69 @@
     color: var(--color-foreground);
   }
 }
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-gold-pale: var(--gold-pale);
+  --color-emerald: var(--emerald);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-body: "Jost", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    letter-spacing: 0.01em;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+  }
+}
+
+@utility text-gilded {
+  background-image: var(--gradient-gold);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility script {
+  font-family: var(--font-script);
+}
+
+@utility rule-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+@utility card-invite {
+  background-color: var(--card);
+  box-shadow: var(--shadow-gold);
+  border: 1px solid color-mix(in oklab, var(--gold) 40%, transparent);
+}
+
+@utility arch {
+  border-top-left-radius: 999px 320px;
+  border-top-right-radius: 999px 320px;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-6px);
+  }
+}
+
+@utility float-slow {
+  animation: flicker 6s ease-in-out infinite;
+}
