@@ -36,7 +36,7 @@ function Ornament({ tone = "gold" }: { tone?: "gold" | "pale" }) {
           <span className="block h-1 w-1 bg-gold" />
         </span>
         <span
-          className={`rotate-45 border p-[5px] ${tone === "pale" ? "border-gold" : "border-gold-deep"}`}
+          className="rotate-45 border border-gold-deep p-[5px]"
         >
           <span className="block h-2 w-2 bg-emerald" />
         </span>
@@ -61,7 +61,7 @@ function SectionTitle({
   return (
     <header className="rise text-center">
       <p
-        className={`text-[0.6rem] uppercase tracking-[0.6em] ${tone === "pale" ? "text-muted-foreground" : "text-emerald"}`}
+        className="text-[0.6rem] uppercase tracking-[0.6em] text-emerald"
       >
         {kicker}
       </p>
