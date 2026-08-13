@@ -77,7 +77,7 @@ function Invitation() {
       {/* ============ ACT I — THE DARK HERO ============ */}
       <section className="panel-ink relative min-h-screen overflow-hidden px-6 pt-20 pb-24 text-center">
         <div
-          className="pointer-events-none absolute inset-0 opacity-25 mix-blend-screen"
+          className="pointer-events-none absolute inset-0 opacity-[0.14] mix-blend-screen"
           style={{ backgroundImage: `url(${pattern})`, backgroundSize: "520px" }}
           aria-hidden="true"
         />
