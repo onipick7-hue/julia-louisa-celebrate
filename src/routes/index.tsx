@@ -61,7 +61,7 @@ function SectionTitle({
   return (
     <header className="rise text-center">
       <p
-        className={`text-[0.6rem] uppercase tracking-[0.6em] ${tone === "pale" ? "text-gold-pale/70" : "text-emerald"}`}
+        className={`text-[0.6rem] uppercase tracking-[0.6em] ${tone === "pale" ? "text-muted-foreground" : "text-emerald"}`}
       >
         {kicker}
       </p>
@@ -75,13 +75,13 @@ function Invitation() {
   return (
     <main className="relative overflow-hidden bg-background">
       {/* ============ ACT I — THE DARK HERO ============ */}
-      <section className="panel-ink relative min-h-screen overflow-hidden px-6 pt-20 pb-24 text-center">
+      <section className="panel-ivory relative min-h-screen overflow-hidden px-6 pt-20 pb-24 text-center">
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.14] mix-blend-screen"
+          className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-multiply"
           style={{ backgroundImage: `url(${pattern})`, backgroundSize: "520px" }}
           aria-hidden="true"
         />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_10%,color-mix(in_oklab,var(--gold)_28%,transparent),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_10%,color-mix(in_oklab,var(--gold)_16%,transparent),transparent_65%)]" />
 
         <div className="relative mx-auto max-w-3xl">
           <div className="flex items-start justify-center gap-8 sm:gap-20">
@@ -112,12 +112,12 @@ function Invitation() {
             />
           </div>
 
-          <p className="mt-12 text-[0.65rem] uppercase tracking-[0.7em] text-gold-pale/60">
+          <p className="mt-12 text-[0.65rem] uppercase tracking-[0.7em] text-muted-foreground">
             Bismillāhir-Raḥmānir-Raḥīm
           </p>
 
           <div className="frame-gold mt-10 px-6 py-12 sm:px-14">
-            <p className="text-[0.6rem] uppercase tracking-[0.55em] text-gold-pale/70">
+            <p className="text-[0.6rem] uppercase tracking-[0.55em] text-muted-foreground">
               Together with their families
             </p>
             <h1 className="mt-8 leading-none">
@@ -134,7 +134,7 @@ function Invitation() {
               </span>
             </h1>
             <Ornament tone="pale" />
-            <p className="mx-auto max-w-md text-sm leading-loose text-gold-pale/75">
+            <p className="mx-auto max-w-md text-sm leading-loose text-muted-foreground">
               Request the honour of your presence as they are joined in marriage. Your prayers and
               blessings would mean the world to us.
             </p>
@@ -144,7 +144,7 @@ function Invitation() {
             {["[ Day ]", "[ Date ]", "[ Time ]"].map((t, i) => (
               <span key={t} className="flex items-center gap-8">
                 {i > 0 && <span className="h-10 w-px bg-gold/40" />}
-                <span className="text-xs uppercase tracking-[0.4em] text-gold-pale">{t}</span>
+                <span className="text-xs uppercase tracking-[0.4em] text-gold-deep">{t}</span>
               </span>
             ))}
           </div>
@@ -188,17 +188,17 @@ function Invitation() {
       </section>
 
       {/* ============ ACT III — VENUE (EMERALD BAND) ============ */}
-      <section className="panel-emerald relative overflow-hidden px-6 py-24">
+      <section className="panel-ivory-soft relative overflow-hidden px-6 py-24">
         <div
-          className="pointer-events-none absolute inset-0 opacity-20 mix-blend-screen"
+          className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-multiply"
           style={{ backgroundImage: `url(${pattern})`, backgroundSize: "480px" }}
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-4xl">
           <SectionTitle kicker="Where" title="The Venue" tone="pale" />
           <div className="text-center">
-            <p className="text-3xl text-gold-pale">{VENUE_NAME}</p>
-            <p className="mt-3 text-sm tracking-[0.2em] text-gold-pale/70">{VENUE_ADDRESS}</p>
+            <p className="text-3xl text-gold-deep">{VENUE_NAME}</p>
+            <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">{VENUE_ADDRESS}</p>
           </div>
           <div className="mt-12">
             <VenueMap query={`${VENUE_NAME} ${VENUE_ADDRESS}`} />
@@ -219,7 +219,7 @@ function Invitation() {
             {[0, 1, 2, 3, 4, 5].map((i) => (
               <div
                 key={i}
-                className={`arch flex items-center justify-center border border-gold/50 bg-secondary/70 text-center shadow-[var(--shadow-soft)] ${
+                className={`arch flex items-center justify-center border border-gold/50 bg-secondary/60 text-center shadow-[var(--shadow-soft)] ${
                   i === 0 ? "col-span-2 row-span-2 aspect-square sm:aspect-auto" : "aspect-square"
                 }`}
               >
@@ -236,9 +236,9 @@ function Invitation() {
       </section>
 
       {/* ============ ACT V — CONTACTS (BLACK FINALE) ============ */}
-      <section className="panel-ink relative overflow-hidden px-6 py-24">
+      <section className="panel-ivory relative overflow-hidden px-6 py-24">
         <div
-          className="pointer-events-none absolute inset-0 opacity-20 mix-blend-screen"
+          className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-multiply"
           style={{ backgroundImage: `url(${pattern})`, backgroundSize: "520px" }}
           aria-hidden="true"
         />
@@ -248,11 +248,11 @@ function Invitation() {
             {["Louisa", "Julian"].map((n) => (
               <div key={n} className="frame-gold px-6 py-10 text-center">
                 <p className="text-[0.6rem] uppercase tracking-[0.5em] text-gold">{n}</p>
-                <p className="mt-5 text-lg tracking-[0.25em] text-gold-pale/70">[ phone number ]</p>
+                <p className="mt-5 text-lg tracking-[0.25em] text-muted-foreground">[ phone number ]</p>
               </div>
             ))}
           </div>
-          <p className="mt-10 text-center text-sm text-gold-pale/70">
+          <p className="mt-10 text-center text-sm text-muted-foreground">
             Kindly reach out for any questions or to confirm your attendance.
           </p>
           <Ornament tone="pale" />
