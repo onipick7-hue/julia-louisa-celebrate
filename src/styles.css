@@ -223,3 +223,60 @@
 @utility float-slow {
   animation: flicker 6s ease-in-out infinite;
 }
+
+@utility panel-ink {
+  background:
+    radial-gradient(ellipse at 50% 0%, color-mix(in oklab, var(--gold) 16%, transparent), transparent 60%),
+    linear-gradient(180deg, oklch(0.17 0.02 155), oklch(0.12 0.015 155));
+  color: var(--gold-pale);
+}
+
+@utility panel-emerald {
+  background: linear-gradient(160deg, oklch(0.28 0.055 158), oklch(0.16 0.03 158));
+  color: var(--gold-pale);
+}
+
+@utility frame-gold {
+  position: relative;
+  border: 1px solid color-mix(in oklab, var(--gold) 55%, transparent);
+  outline: 1px solid color-mix(in oklab, var(--gold) 25%, transparent);
+  outline-offset: 8px;
+}
+
+@utility glow-gold {
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--gold) 40%, transparent),
+    0 0 60px -10px color-mix(in oklab, var(--gold) 45%, transparent);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@utility text-gilded-anim {
+  background-image: var(--gradient-gold);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 8s linear infinite;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility rise {
+  animation: riseIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
