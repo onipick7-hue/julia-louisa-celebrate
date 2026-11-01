@@ -104,9 +104,7 @@ function Invitation() {
             />
           </div>
 
-          <p className="mt-12 text-[0.65rem] uppercase tracking-[0.7em] text-muted-foreground">
-            Bismillāhir-Raḥmānir-Raḥīm
-          </p>
+  
 
           <div className="frame-gold mt-10 px-6 py-12 sm:px-14">
             <p className="text-[0.6rem] uppercase tracking-[0.55em] text-muted-foreground">
@@ -133,7 +131,7 @@ function Invitation() {
           </div>
 
           <div className="mx-auto mt-10 inline-flex items-center gap-8 border-y-2 border-gold/50 px-10 py-5">
-            {["[ Day ]", "[ Date ]", "[ Time ]"].map((t, i) => (
+            {["[ Friday ]", "[ December 11 ]", "[ 9:00AM ]"].map((t, i) => (
               <span key={t} className="flex items-center gap-8">
                 {i > 0 && <span className="h-10 w-px bg-gold/40" />}
                 <span className="text-xs uppercase tracking-[0.4em] text-gold-deep">{t}</span>
@@ -189,8 +187,9 @@ function Invitation() {
         <div className="relative mx-auto max-w-4xl">
           <SectionTitle kicker="Where" title="The Venue" />
           <div className="text-center">
-            <p className="text-3xl text-gold-deep">{VENUE_NAME}</p>
-            <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">{VENUE_ADDRESS}</p>
+            <p className="text-3xl text-gold-deep">{JV EVENTS PALACE}</p>
+            <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">{
+F. Valenzuela Street , Valenzuela, Philippines, 1444}</p>
           </div>
           <div className="mt-12">
             <VenueMap query={`${VENUE_NAME} ${VENUE_ADDRESS}`} />
