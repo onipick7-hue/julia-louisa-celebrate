@@ -239,7 +239,7 @@ F. Valenzuela Street , Valenzuela, Philippines, 1444</p>
             {["Louisa", "Julian"].map((n) => (
               <div key={n} className="frame-gold px-6 py-10 text-center">
                 <p className="text-[0.6rem] uppercase tracking-[0.5em] text-gold">{n}</p>
-                <p className="mt-5 text-lg tracking-[0.25em] text-muted-foreground">[ phone number ]</p>
+                <p className="mt-5 text-lg tracking-[0.25em] text-muted-foreground">[ 09276269082 ]</p>
               </div>
             ))}
           </div>
@@ -247,7 +247,7 @@ F. Valenzuela Street , Valenzuela, Philippines, 1444</p>
             Kindly reach out for any questions or to confirm your attendance.
           </p>
           <Ornament />
-          <p className="script text-center text-5xl text-gilded-anim">Barakallahu lakuma</p>
+          
         </div>
       </section>
     </main>
