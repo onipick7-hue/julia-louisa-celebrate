@@ -133,7 +133,7 @@ function Invitation() {
           </div>
 
           <div className="mx-auto mt-10 inline-flex items-center gap-8 border-y-2 border-gold/50 px-10 py-5">
-            {["[ Day ]", "[ Date ]", "[ Time ]"].map((t, i) => (
+            {["Friday", "December 11, 2026", "[ Time ]"].map((t, i) => (
               <span key={t} className="flex items-center gap-8">
                 {i > 0 && <span className="h-10 w-px bg-gold/40" />}
                 <span className="text-xs uppercase tracking-[0.4em] text-gold-deep">{t}</span>
