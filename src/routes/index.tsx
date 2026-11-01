@@ -187,9 +187,9 @@ function Invitation() {
         <div className="relative mx-auto max-w-4xl">
           <SectionTitle kicker="Where" title="The Venue" />
           <div className="text-center">
-            <p className="text-3xl text-gold-deep">{JV EVENTS PALACE}</p>
-            <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">{
-F. Valenzuela Street , Valenzuela, Philippines, 1444}</p>
+            <p className="text-3xl text-gold-deep"> JV EVENTS PALACE </p>
+            <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">
+F. Valenzuela Street , Valenzuela, Philippines, 1444</p>
           </div>
           <div className="mt-12">
             <VenueMap query={`${VENUE_NAME} ${VENUE_ADDRESS}`} />
